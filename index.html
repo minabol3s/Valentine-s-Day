@@ -14,29 +14,33 @@
         }
 
         h1 {
-            font-size: 15px;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            margin-bottom: 15px;
         }
 
         p {
-            font-size: 10px; /* تم تصغير الخط هنا */
-            margin: 20px 0;
+            font-size: 1.2em; /* تصغير الخط ليكون متناسق */
+            margin: 15px 0;
+            line-height: 1.6; /* تحسين المسافات بين السطور */
         }
 
         .message {
-            font-size: 2em;
+            font-size: 1.5em;
             margin: 20px;
             display: none;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
         }
 
         .button {
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 12px 25px;
+            font-size: 1em;
             background-color: #ff4d4d;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: 0.3s ease;
         }
 
@@ -45,14 +49,16 @@
         }
 
         img {
-            margin: 30px 0;
+            margin: 20px 0;
+            width: 120px; /* تعديل حجم الصورة */
+            height: auto;
         }
     </style>
 </head>
 <body>
 
     <h1>عيد حب سعيد يا حبيبي</h1>
-    <img src="h.png" alt="قلب" width="150">
+    <img src="h.png" alt="قلب">
     <p>إنتِ أغلى حاجة في حياتي يا إيريني.</p>
     <button class="button" onclick="showMessage()">إضغط هنا لتقرأ الرسالة</button>
 
@@ -64,7 +70,8 @@
             أنتِ النور اللي منور حياتي، والأمل اللي مخليني كل يوم أكون أفضل.  
             بحبك أكتر من ما أي كلام يقدر يعبر عنه، وكل سنة وإنتِ معايا وبخير وسعادة يا أغلى من أي حاجة في الدنيا.  
 
-            عيد حب سعيد يا حبيبي 💖 </p>
+            عيد حب سعيد يا حبيبي 💖  
+        </p>
     </div>
 
     <script>
