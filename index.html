@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد الحب</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ff7f7f, #ffb6c1);
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px; /* تم تصغير الخط هنا */
+            margin: 20px 0;
+        }
+
+        .message {
+            font-size: 2em;
+            margin: 20px;
+            display: none;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff1a1a;
+        }
+
+        img {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>عيد حب سعيد يا حبيبي</h1>
+    <img src="h.png" alt="قلب" width="150">
+    <p>إنتِ أغلى حاجة في حياتي يا إيريني.</p>
+    <button class="button" onclick="showMessage()">إضغط هنا لتقرأ الرسالة</button>
+
+    <div id="message" class="message">
+        <p>حبيبت قلبي إيريني،  
+            كل سنة وإنتِ طيبة يا أحلى وأغلى من في حياتي.  
+            أنا مش لاقي كلام يوصف قد إيه إنتِ مميزة بالنسبة لي.  
+            وجودك في حياتي هو أحلى هدية من ربنا، وكل لحظة معاك بحس إن الدنيا مليانة حب ودفا.  
+            أنتِ النور اللي منور حياتي، والأمل اللي مخليني كل يوم أكون أفضل.  
+            بحبك أكتر من ما أي كلام يقدر يعبر عنه، وكل سنة وإنتِ معايا وبخير وسعادة يا أغلى من أي حاجة في الدنيا.  
+
+            عيد حب سعيد يا حبيبي 💖 </p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
