@@ -5,94 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عيد الحب</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Cairo:wght@400;700&family=Pacifico&display=swap');
+
         body {
             background: linear-gradient(to bottom right, #ff7f7f, #ffb6c1);
             font-family: 'Cairo', sans-serif;
             text-align: center;
             color: white;
             padding: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 77, 77, 0.8);
+            padding: 10px;
+            font-size: 1.5em;
+            font-family: 'Pacifico', cursive;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .navbar span {
+            display: inline-block;
+            position: relative;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .main-heart {
+            font-size: 4em;
+            position: relative;
+            margin-top: 80px;
         }
 
         h1 {
             font-size: 2em;
-            margin-bottom: 10px;
+            margin-top: 20px;
+            font-family: 'Lobster', cursive;
         }
 
-        p {
-            font-size: 1em;
-            margin: 10px 0;
-            line-height: 1.5; /* تحسين المسافات بين السطور */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 1.5em;
+            animation: fall linear infinite;
         }
 
-        .message {
-            font-size: 1.3em;
-            margin: 15px;
-            display: none;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
         }
 
         .button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 15px 30px;
+            font-size: 1.2em;
             background-color: #ff4d4d;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 8px;
-            transition: 0.3s ease;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .button:hover {
             background-color: #ff1a1a;
+            transform: scale(1.1);
         }
 
-        img {
-            margin: 15px 0;
-            width: 100px; /* تقليل الحجم على الهواتف */
-            height: auto;
-        }
-
-        /* تحسين التصميم على الموبايلات */
-        @media (max-width: 600px) {
-            body {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 0.9em;
-            }
-            .message {
-                font-size: 1.1em;
-            }
-            .button {
-                font-size: 0.9em;
-                padding: 8px 16px;
-            }
-            img {
-                width: 80px; /* تصغير الصورة أكثر على الشاشات الصغيرة */
-            }
-        }
     </style>
 </head>
 <body>
-
+    <div class="navbar"><span>Ereny 😘</span></div>
+    <div class="main-heart">❤️</div>
     <h1>عيد حب سعيد يا حبيبي</h1>
-    <img src="h.png" alt="قلب">
-    <p>إنتِ أغلى حاجة في حياتي يا إيريني.</p>
     <button class="button" onclick="showMessage()">إضغط هنا لتقرأ الرسالة</button>
 
-    <div id="message" class="message">
+    <div id="message" class="message" style="display: none;">
         <p>حبيبت قلبي إيريني،  
             كل سنة وإنتِ طيبة يا أحلى وأغلى من في حياتي.  
             أنا مش لاقي كلام يوصف قد إيه إنتِ مميزة بالنسبة لي.  
             وجودك في حياتي هو أحلى هدية من ربنا، وكل لحظة معاك بحس إن الدنيا مليانة حب ودفا.  
             أنتِ النور اللي منور حياتي، والأمل اللي مخليني كل يوم أكون أفضل.  
             بحبك أكتر من ما أي كلام يقدر يعبر عنه، وكل سنة وإنتِ معايا وبخير وسعادة يا أغلى من أي حاجة في الدنيا.  
-
             عيد حب سعيد يا حبيبي 💖  
         </p>
     </div>
@@ -101,8 +116,24 @@
         function showMessage() {
             document.getElementById('message').style.display = 'block';
         }
-    </script>
 
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+            
+            let size = Math.random() * 20 + 10;
+            heart.style.fontSize = size + "px";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        setInterval(createHeart, 300);
+    </script>
 </body>
 </html>
-
