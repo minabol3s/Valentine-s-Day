@@ -10,23 +10,23 @@
             font-family: 'Cairo', sans-serif;
             text-align: center;
             color: white;
-            padding: 50px;
+            padding: 30px;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
         p {
-            font-size: 1.2em; /* تصغير الخط ليكون متناسق */
-            margin: 15px 0;
-            line-height: 1.6; /* تحسين المسافات بين السطور */
+            font-size: 1em;
+            margin: 10px 0;
+            line-height: 1.5; /* تحسين المسافات بين السطور */
         }
 
         .message {
-            font-size: 1.5em;
-            margin: 20px;
+            font-size: 1.3em;
+            margin: 15px;
             display: none;
             padding: 15px;
             background: rgba(255, 255, 255, 0.2);
@@ -34,7 +34,7 @@
         }
 
         .button {
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-size: 1em;
             background-color: #ff4d4d;
             color: white;
@@ -49,9 +49,32 @@
         }
 
         img {
-            margin: 20px 0;
-            width: 120px; /* تعديل حجم الصورة */
+            margin: 15px 0;
+            width: 100px; /* تقليل الحجم على الهواتف */
             height: auto;
+        }
+
+        /* تحسين التصميم على الموبايلات */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .message {
+                font-size: 1.1em;
+            }
+            .button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+            img {
+                width: 80px; /* تصغير الصورة أكثر على الشاشات الصغيرة */
+            }
         }
     </style>
 </head>
@@ -82,3 +105,4 @@
 
 </body>
 </html>
+
