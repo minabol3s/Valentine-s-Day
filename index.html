@@ -16,9 +16,9 @@
             padding: 30px;
             margin: 0;
             position: relative;
-            min-height: 100vh; /* التأكد من تغطية الصفحة بالكامل */
-            overflow-x: hidden; /* منع التمرير الأفقي */
-            scroll-behavior: smooth; /* التمرير السلس */
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* شريط التنقل العلوي */
@@ -41,7 +41,7 @@
 
         /* النص المتحرك */
         .moving-text {
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             font-size: 25px;
             white-space: nowrap;
             animation: marquee 10s linear infinite;
@@ -109,8 +109,8 @@
 
         /* قلوب وكلمة بحبك تتساقط */
         .falling-heart {
-            position: fixed; /* تأكد من أن القلوب ثابتة */
-            top: 20px; /* مكان بداية ظهور القلوب */
+            position: fixed;
+            top: 20px;
             font-family: 'Cairo', sans-serif;
             font-size: 18px;
             font-weight: bold;
@@ -140,7 +140,6 @@
     <div class="main-heart">❤️</div>
     <h1>عيد حب سعيد يا حبيبي</h1>
     
-    <!-- تم تغيير نص الزر هنا -->
     <button class="button" onclick="toggleMessage('message')">خشي ب رجلك اليمين😂🙈</button>
     <div id="message" class="message">
         <p>حبيبت قلبي إيريني،  
@@ -153,19 +152,16 @@
         </p>
     </div>
 
-    <!-- زر جديد لعرض رسالة "أحبك يا فتاة" -->
     <button class="button" onclick="toggleLoveMessage()">بصي هنا 🙈👇</button>
     <div id="loveMessage" class="message">
         <p>أحبك يا فتاة 😂😂</p>
     </div>
 
-    <!-- تغيير النص إلى "دوسي هنا يا قمر" -->
     <button class="button" onclick="createExplosion()">دوسي هنا يا قمر</button>
 
     <div class="footer"></div>
 
     <script>
-        // عرض وإخفاء الرسائل
         function toggleMessage(messageId) {
             const message = document.getElementById(messageId);
             if (message.style.display === "none" || message.style.display === "") {
@@ -175,7 +171,6 @@
             }
         }
 
-        // دالة لعرض رسالة "أحبك يا فتاة"
         function toggleLoveMessage() {
             const message = document.getElementById("loveMessage");
             if (message.style.display === "none" || message.style.display === "") {
@@ -185,7 +180,6 @@
             }
         }
 
-        // دالة تفجير القلوب عند الضغط على الزر
         function createExplosion() {
             for (let i = 0; i < 20; i++) {
                 const heart = document.createElement("div");
@@ -196,7 +190,6 @@
                 heart.style.left = Math.random() * 100 + "vw";
                 heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // تعيين مدة مختلفة لكل قلب
 
-                // إزالة القلوب بعد فترة قصيرة
                 setTimeout(() => {
                     heart.remove();
                 }, 4000);
